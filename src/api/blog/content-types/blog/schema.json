@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "MetaSection": {
+      "type": "component",
+      "component": "meta-section.meta-section",
+      "repeatable": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Slider": {
+      "type": "component",
+      "component": "slider.slider",
+      "repeatable": false
+    }
+  }
+}

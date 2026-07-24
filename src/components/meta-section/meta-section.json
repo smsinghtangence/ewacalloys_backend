@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_meta_section_meta_sections",
+  "info": {
+    "displayName": "MetaSection"
+  },
+  "options": {},
+  "attributes": {
+    "MetaTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "text"
+    },
+    "MetaKeyword": {
+      "type": "string"
+    },
+    "MetaRobots": {
+      "type": "enumeration",
+      "enum": [
+        "index,follow",
+        "noindex,nofollow",
+        "index,nofollow",
+        "noindex,follow",
+        "index",
+        "follow"
+      ]
+    }
+  },
+  "config": {}
+}
