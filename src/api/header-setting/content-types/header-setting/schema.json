@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "header_settings",
+  "info": {
+    "singularName": "header-setting",
+    "pluralName": "header-settings",
+    "displayName": "Header Settings",
+    "description": "Site header content: top news bar, nav dropdown copy, and simple nav links"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TopBar": {
+      "type": "component",
+      "component": "nav.top-bar",
+      "repeatable": false
+    },
+    "ProductsDropdown": {
+      "type": "component",
+      "component": "nav.dropdown-copy",
+      "repeatable": false
+    },
+    "ServicesDropdown": {
+      "type": "component",
+      "component": "nav.dropdown-copy",
+      "repeatable": false
+    },
+    "IndustriesDropdown": {
+      "type": "component",
+      "component": "nav.dropdown-copy",
+      "repeatable": false
+    },
+    "NavLinks": {
+      "type": "component",
+      "component": "nav.nav-link",
+      "repeatable": true
+    }
+  }
+}

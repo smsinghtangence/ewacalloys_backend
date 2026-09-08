@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_nav_top_bars",
+  "info": {
+    "displayName": "Top Bar"
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "default": "NEWS"
+    },
+    "Message": {
+      "type": "string"
+    },
+    "CtaLabel": {
+      "type": "string"
+    },
+    "CtaHref": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "config": {}
+}

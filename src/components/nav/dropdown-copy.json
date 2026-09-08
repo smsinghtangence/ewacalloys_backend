@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_nav_dropdown_copies",
+  "info": {
+    "displayName": "Dropdown Copy"
+  },
+  "options": {},
+  "attributes": {
+    "Eyebrow": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ExploreLabel": {
+      "type": "string",
+      "default": "Explore All"
+    },
+    "ExploreHref": {
+      "type": "string",
+      "default": "#"
+    }
+  },
+  "config": {}
+}

@@ -532,6 +532,39 @@ export interface ApiFooterColumnFooterColumn
   };
 }
 
+export interface ApiHeaderSettingHeaderSetting extends Struct.SingleTypeSchema {
+  collectionName: 'header_settings';
+  info: {
+    description: 'Site header content: top news bar, nav dropdown copy, and simple nav links';
+    displayName: 'Header Settings';
+    pluralName: 'header-settings';
+    singularName: 'header-setting';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    IndustriesDropdown: Schema.Attribute.Component<'nav.dropdown-copy', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::header-setting.header-setting'
+    > &
+      Schema.Attribute.Private;
+    NavLinks: Schema.Attribute.Component<'nav.nav-link', true>;
+    ProductsDropdown: Schema.Attribute.Component<'nav.dropdown-copy', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    ServicesDropdown: Schema.Attribute.Component<'nav.dropdown-copy', false>;
+    TopBar: Schema.Attribute.Component<'nav.top-bar', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
   collectionName: 'industries';
   info: {
@@ -1290,6 +1323,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::contact-submission.contact-submission': ApiContactSubmissionContactSubmission;
       'api::footer-column.footer-column': ApiFooterColumnFooterColumn;
+      'api::header-setting.header-setting': ApiHeaderSettingHeaderSetting;
       'api::industry.industry': ApiIndustryIndustry;
       'api::page.page': ApiPagePage;
       'api::product-category.product-category': ApiProductCategoryProductCategory;
