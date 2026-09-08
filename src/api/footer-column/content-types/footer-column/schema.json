@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_columns",
+  "info": {
+    "singularName": "footer-column",
+    "pluralName": "footer-columns",
+    "displayName": "Footer Column"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer"
+    },
+    "links": {
+      "type": "component",
+      "component": "footer.footer-link",
+      "repeatable": true
+    }
+  }
+}

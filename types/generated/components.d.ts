@@ -11,6 +11,17 @@ export interface FaqFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface FooterFooterLink extends Struct.ComponentSchema {
+  collectionName: 'components_footer_footer_links';
+  info: {
+    displayName: 'Footer Link';
+  };
+  attributes: {
+    Href: Schema.Attribute.String & Schema.Attribute.DefaultTo<'#'>;
+    Label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface MetaSectionMetaSection extends Struct.ComponentSchema {
   collectionName: 'components_meta_section_meta_sections';
   info: {
@@ -51,6 +62,7 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'faq.faq': FaqFaq;
+      'footer.footer-link': FooterFooterLink;
       'meta-section.meta-section': MetaSectionMetaSection;
       'slider.slider': SliderSlider;
     }
